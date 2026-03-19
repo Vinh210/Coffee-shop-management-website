@@ -1,1 +1,1 @@
-# E-commerce-Management-System
+# Coffee shop management website
