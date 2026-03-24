@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoffeeChain Pro Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Login Page -->
+    <div id="loginPage" class="login-page">
+      <div class="login-container">
+        <div class="login-logo">
+          <div class="login-logo-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M2 21h20M6 18V9M10 18V9M14 18V9M18 18V9M12 2L2 9h20L12 2z"
+              />
+            </svg>
+          </div>
+          <h1 class="login-title">CoffeeChain Pro</h1>
+          <p class="login-subtitle">Hệ thống quản lý chuỗi cửa hàng cà phê</p>
+        </div>
+        <div class="login-card">
+          <h2>Đăng nhập</h2>
+          <div id="loginError" class="error-message hidden"></div>
+          <form id="loginForm">
+            <div class="form-group">
+              <label>Tên đăng nhập</label>
+              <input
+                type="text"
+                id="username"
+                required
+                placeholder="Nhập tên đăng nhập"
+              />
+            </div>
+            <div class="form-group">
+              <label>Mật khẩu</label>
+              <input
+                type="password"
+                id="password"
+                required
+                placeholder="Nhập mật khẩu"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+          </form>
+          <div class="demo-accounts">
+            <p>Tài khoản demo:</p>
+            <div class="demo-account">
+              <span><strong>Admin:</strong></span>
+              <span>admin / admin123</span>
+            </div>
+            <div class="demo-account">
+              <span><strong>Manager:</strong></span>
+              <span>manager / manager123</span>
+            </div>
+            <div class="demo-account">
+              <span><strong>Barista:</strong></span>
+              <span>barista / barista123</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main App -->
+    <div id="appContainer" class="app-container hidden">
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+          <div class="sidebar-logo">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M2 21h20M6 18V9M10 18V9M14 18V9M18 18V9M12 2L2 9h20L12 2z"
+              />
+            </svg>
+          </div>
+          <div class="sidebar-title">
+            <h1>CoffeeChain</h1>
+            <p>Pro Manager</p>
+          </div>
+        </div>
+        <nav class="sidebar-nav" id="sidebarNav"></nav>
+        <div class="sidebar-footer">
+          <div class="user-info">
+            <div class="user-avatar" id="userAvatar">AD</div>
+            <div class="user-details">
+              <h3 id="userName">Admin User</h3>
+              <p id="userEmail">admin@coffee.com</p>
+            </div>
+          </div>
+          <button class="btn-logout" onclick="app.logout()">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 17l5-5m0 0l-5-5m5 5H9m0-13a9 9 0 100 18" />
+            </svg>
+            Đăng xuất
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content" id="mainContent"></main>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" onclick="app.toggleSidebar()">☰</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
